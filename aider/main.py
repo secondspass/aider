@@ -686,8 +686,7 @@ def main(argv=None, input=None, output=None, force_git_root=None, return_coder=F
         elif not path.exists() and git_root:
             # try to find file in git_root
             path = Path(git_root).joinpath(fn)
-            if path.exists():
-                read_only_fnames.append(str(path))
+            read_only_fnames.append(str(path))
         else:
             read_only_fnames.append(str(path))
 
